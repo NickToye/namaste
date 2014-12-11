@@ -1,0 +1,67 @@
+{% layout "home" %}
+
+{% block content %}
+		<div id="banners" class="carousel slide carousel--fade" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel__indicators">
+				<li data-target="#banners" data-slide-to="0" class="active"></li>
+				<li data-target="#banners" data-slide-to="1"></li>
+				<li data-target="#banners" data-slide-to="2"></li>
+			</ol>
+			<!-- Wrapper for slides -->
+			<div class="carousel__inner">
+				<figure class="carousel__item active">
+					<img src="http://placehold.it/1000x350&text=Slide1">
+					<figcaption class="carousel-caption">Slide 1</figcaption>
+				</figure>
+				<figure class="carousel__item">
+					<img src="http://placehold.it/1000x350&text=Slide2">
+					<figcaption class="carousel-caption">Slide 2</figcaption>
+				</figure>
+				<figure class="carousel__item">
+					<img src="http://placehold.it/1000x350&text=Slide3">
+					<figcaption class="carousel-caption">Slide 3</figcaption>
+				</figure>
+				<!-- Controls -->
+				<a class="left carousel__control" href="#banners" role="button" data-slide="prev">
+				<i class="fa fa-angle-left"></i>
+				</a>
+				<a class="right carousel__control" href="#banners" role="button" data-slide="next">
+				<i class="fa fa-angle-right"></i>
+				</a>
+			</div>
+		</div>
+		<section class="cta">
+			<div class="panel">
+				<a href="#">
+					<div class="panel__body">
+						<img src="http://placehold.it/400x400">
+					</div>
+					<footer class="panel__footer">
+						<h2>Organic<br />essential oils</h2>
+					</footer>
+				</a>
+			</div>
+			<div class="panel">
+				<a href="#">
+					<div class="panel__body">
+						<img src="http://placehold.it/400x400">
+					</div>
+					<footer class="panel__footer">
+						<h2>View our<br />chakra spa cds</h2>
+					</footer>
+				</a>
+			</div>
+			<div class="panel">
+				<a href="#">
+					<div class="panel__body">
+						<img src="http://placehold.it/400x400">
+					</div>
+					<footer class="panel__footer">
+						<h2>New range of organic aromatherapy candles</h2>
+					</footer>
+				</a>
+			</div>
+		</section>
+{% endblock %}
+

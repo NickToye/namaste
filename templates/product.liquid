@@ -1,0 +1,26 @@
+{% layout "inner" %}
+
+{% block content %}
+	<header>
+		<ol class="breadcrumb">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">product category</a></li>
+			<li class="active">active product</li>
+		</ol>
+	</header>
+
+<section id="product-page" class="content shop">
+	<form class="form">
+	{% include "shop-categories" %}
+	<div id="product-content">
+		<header class="visible-sm">
+			<h1>Product name</h1>
+			<h2 class="price">£X.XX</h2>
+		</header>
+		{% include "shop-product-gallery" %}
+		{% include "shop-product" %}
+	</div>
+	</form>
+</section>
+
+{% endblock %}

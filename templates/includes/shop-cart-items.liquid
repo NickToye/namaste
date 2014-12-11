@@ -1,0 +1,65 @@
+<table class="table">
+	<thead>
+		<tr>
+			<th class="item">Item</th>
+			<th class="quantity">Quantity</th>
+			<th class="item-total">Item Total</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="item">
+				<div class="product-details">
+					<a href="/product/{{ item.product.url_name }}" class="product-name">Product name here, it can be really long to fit in</a>
+					<p class="product-price"><small>£6.96</small></p>
+				</div>
+				<figure class="product-image">
+					<img src="http://placehold.it/400x200">
+				</figure>
+
+			</td>
+			<td class="quantity">
+				<fieldset class="controls controls--quantity">
+					<button class="quantity-btn minus btn btn--sm btn--default"><i class="fa fa-minus"></i></button>
+					<input type="text" name="item_quantity[{{ item.key }}]" class="controls--quantity__control input-sm quantity" value="2">
+					<button class="quantity-btn plus btn btn--sm btn--default"><i class="fa fa-plus"></i></button>
+				</fieldset>
+			</td>
+			<td class="item-total">
+				£6.65
+				<a class="remove-item" href="#close"
+				data-ajax-handler="shop:cart"
+				{# data-ajax-confirm="Do you really want to remove this item from the cart?" #}
+				data-ajax-update="#cart-content=shop-cart-content, #mini-cart=shop-minicart, #navbar-totals=shop-minicart-totals"
+				data-ajax-extra-fields="delete_item='{{ item.key }}'"><i class="fa fa-times"></i></a>
+			</td>
+		</tr>
+		<tr>
+			<td class="item">
+				<div class="product-details">
+					<a href="/product/{{ item.product.url_name }}">Product name here</a>
+					<p><small class="unit-price">£6.96</small></p>
+				</div>
+				<figure class="product-image">
+					<img src="http://placehold.it/400x200">
+				</figure>
+
+			</td>
+			<td class="quantity">
+				<fieldset class="controls controls--quantity">
+					<button class="quantity-btn minus btn btn--sm btn--default"><i class="fa fa-minus"></i></button>
+					<input type="text" name="item_quantity[{{ item.key }}]" class="controls--quantity__control input-sm quantity" value="2">
+					<button class="quantity-btn plus btn btn--sm btn--default"><i class="fa fa-plus"></i></button>
+				</fieldset>
+			</td>
+			<td class="item-total">
+				£6.65
+				<a class="remove-item" href="#close"
+				data-ajax-handler="shop:cart"
+				{# data-ajax-confirm="Do you really want to remove this item from the cart?" #}
+				data-ajax-update="#cart-content=shop-cart-content, #mini-cart=shop-minicart, #navbar-totals=shop-minicart-totals"
+				data-ajax-extra-fields="delete_item='{{ item.key }}'"><i class="fa fa-times"></i></a>
+			</td>
+		</tr>
+	</tbody>
+</table>

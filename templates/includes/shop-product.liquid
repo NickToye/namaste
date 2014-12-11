@@ -1,0 +1,19 @@
+<section class="product-details">
+	<header class="hidden-sm">
+		<h1>Product name</h1>
+		<h2 class="price">£X.XX</h2>
+	</header>
+	<div class="description">
+		{{ 1 | lorem_ipsum:'p' }}
+	</div>
+	<div class="actions">
+
+			<fieldset class="controls controls--quantity">
+				<button class="quantity-btn minus btn btn--sm btn--default"><i class="fa fa-minus"></i></button>
+				<input type="text" name="item_quantity[{{ item.key }}]" class="controls--quantity__control input-sm quantity" value="2">
+				<button class="quantity-btn plus btn btn--sm btn--default"><i class="fa fa-plus"></i></button>
+			</fieldset>
+		<a class="btn btn--default btn-add-cart pull-right" href="#" data-ajax-handler="shop:onAddToCart" data-ajax-update="#mini-cart=shop-minicart, #product-page=shop-product, #navbar-totals=shop-minicart-totals">Add to Cart <i class="fa fa-shopping-cart"></i></a>
+	</div>
+</section>
+

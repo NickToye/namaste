@@ -1,0 +1,38 @@
+{% layout "inner" %}
+
+{% block content %}
+	<header>
+		<h1>Become a Stockist</h1>
+	</header>
+	<article class="content-block">
+
+		<form role="form" class="form">
+			<fieldset class="controls">
+				<label for="exampleInputEmail1" class="controls__label">Email address *</label>
+				<input type="email" class="controls__control" id="exampleInputEmail1" name="exampleInputEmail1" placeholder="Enter email">
+			</fieldset>
+			<fieldset class="controls">
+				<label for="your_name" class="controls__label">Your name *</label>
+				<input type="text" class="controls__control" id="your_name" placeholder="Your name">
+			</fieldset>
+			<fieldset class="controls">
+				<label class="controls__label">Message</label>
+				<textarea class="controls__control" rows="3"></textarea>
+			</fieldset>
+			<fieldset class="controls">
+				<button type="submit" name="submit" class="btn btn--primary">Submit</button>
+			</fieldset>
+		</form>
+	</article>
+
+	<aside>
+		<header>
+			<h1 class="h2">Why become a Stockist?</h1>
+		</header>
+		<ul class="">
+			<li>Reason 1</li>
+			<li>Reason 2</li>
+			<li>Reason 3</li>
+		</ul>
+	</aside>
+{% endblock %}

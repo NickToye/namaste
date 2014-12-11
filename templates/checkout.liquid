@@ -1,0 +1,23 @@
+{% layout "inner" %}
+
+{% block content %}
+	<header>
+		<h1>Checkout</h1>
+	</header>
+
+	<section class="content checkout">
+		<div class="checkout__progress">
+			{% include "shop-checkout-progress" %}
+		</div>
+		<div class="checkout__content">
+			<form action="#" method="" accept-charset="utf-8" class="form">
+				{% include "shop-checkout" %}
+			</form>
+		</div>
+		<div class="checkout-totals-wrapper">
+			{% include "shop-checkout-totals" %}
+		</div>
+	</section>
+
+
+{% endblock %}

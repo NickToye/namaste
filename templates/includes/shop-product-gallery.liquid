@@ -1,0 +1,37 @@
+<div id="product-gallery-wrapper">
+	<div id="product-gallery" class="carousel slide" data-ride="carousel" data-interval="false">
+
+		<!-- Wrapper for slides -->
+			<div class="carousel__inner">
+				<figure class="carousel__item active">
+					<img src="http://placehold.it/610x350&text=Product Image 1">
+				</figure>
+				<figure class="carousel__item">
+					<img src="http://placehold.it/610x350&text=Product Image 2">
+				</figure>
+				<figure class="carousel__item">
+					<img src="http://placehold.it/610x350&text=Product Image 3">
+				</figure>
+				<figure class="carousel__item">
+					<img src="http://placehold.it/610x350&text=Product Image 4">
+				</figure>
+			</div>
+
+			<!-- Indicators -->
+			<ol class="carousel__thumbs list-inline">
+				<li data-target="#product-gallery" data-slide-to="0" class="{{ loop.index == 1 ? 'active' : null }}">
+					<img src="http://placehold.it/250x250&text=1">
+				</li>
+				<li data-target="#product-gallery" data-slide-to="1" class="{{ loop.index == 1 ? 'active' : null }}">
+					<img src="http://placehold.it/250x250&text=2">
+				</li>
+				<li data-target="#product-gallery" data-slide-to="2" class="{{ loop.index == 1 ? 'active' : null }}">
+					<img src="http://placehold.it/250x250&text=3">
+				</li>
+				<li data-target="#product-gallery" data-slide-to="3" class="{{ loop.index == 1 ? 'active' : null }}">
+					<img src="http://placehold.it/250x250&text=4">
+				</li>
+			</ol>
+
+	</div>
+</div>

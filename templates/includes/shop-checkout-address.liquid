@@ -1,0 +1,99 @@
+<section id="billing-info">
+	<header>
+		<h2>Billing Information</h2>
+	</header>
+	<fieldset class="controls controls--left">
+		<label for="billing_firstName" class="controls__label">First Name</label>
+		<input data-mirror type="text" class="controls__control" name="billingInfo[firstName]" id="billing_firstName" value="{{ billingInfo.firstName }}" placeholder="First Name"/>
+	</fieldset>
+	<fieldset class="controls controls--right">
+		<label for="billing_lastName" class="controls__label">Last Name</label>
+		<input data-mirror type="text" class="controls__control" name="billingInfo[lastName]" id="billing_lastName" value="{{ billingInfo.lastName }}" placeholder="Last Name"/>
+	</fieldset>
+	<fieldset class="controls controls--left">
+		<label for="billing_email" class="controls__label">E-mail Address</label>
+		<input data-mirror type="email" class="controls__control" name="billingInfo[email]" id="billing_email" value="{{ billingInfo.email }}" placeholder="E-mail Address"/>
+	</fieldset>
+	<fieldset class="controls controls--right">
+		<label for="billing_lastName" class="controls__label">Phone Number</label>
+		<input data-mirror type="text" class="controls__control" name="billingInfo[phone]" id="billing_phone" value="{{ billingInfo.phone }}" placeholder="Phone Number"/>
+	</fieldset>
+	<fieldset class="controls controls--full">
+		<label for="billing_address" class="controls__label">Address</label>
+		<input data-mirror type="text" class="controls__control" id="billing_address" name="billingInfo[streetAddressLine1]" value="{{ billingInfo.streetAddressLine1 }}" placeholder="Address"/>
+	</fieldset>
+	<fieldset class="controls controls--left">
+		<label for="billing_city" class="controls__label">City</label>
+		<input data-mirror type="text" class="controls__control" name="billingInfo[city]" id="billing_city" value="{{ billingInfo.city }}" placeholder="City"/>
+	</fieldset>
+	<fieldset class="controls controls--right">
+		<label for="billing_postalCode" class="controls__label">Post Code</label>
+		<input data-mirror type="text" class="controls__control" name="billingInfo[postalCode]" id="billing_postalCode" value="{{ billingInfo.postalCode }}" placeholder="Post Code"/>
+	</fieldset>
+	<fieldset class="controls controls--left">
+		<label for="billing_country" class="controls__label">Country</label>
+		<select data-mirror id="billing_country" class="controls__control" name="billingInfo[countryId]" data-state-selector="#billing_state" data-current-state="{{ billingInfo.stateId }}">
+			<option {{ option_state(billingInfo.countryId, country.id) }} value="{{ country.id }}">UK</option>
+		</select>
+	</fieldset>
+	<fieldset class="controls controls--right">
+		<label for="billing_state" class="controls__label">State</label>
+		<select data-mirror id="billing_state" class="chzn-select controls__control" name="billingInfo[stateId]" data-ajax-refresh>
+			<option>Cheshire</option>
+		</select>
+	</fieldset>
+</section>
+
+
+
+<section id="shipping-info">
+	<header>
+		<h2>Delivery Information</h2>
+		<p><a data-toggle-mirror="on" data-toggle="collapse" class="btn btn--default btn--xs btn--form-mirror" href="#shipping-info"><i class="fa fa-check"></i></a>
+	Same as Billing Information</p>
+	</header>
+	<fieldset class="controls controls--left">
+		<label for="shipping_firstName" class="controls__label">First Name</label>
+		<input data-mirror type="text" class="controls__control" name="shippingInfo[firstName]" id="shipping_firstName" value="{{ shippingInfo.firstName }}" placeholder="First Name"/>
+	</fieldset>
+	<fieldset class="controls controls--right">
+		<label for="shipping_lastName" class="controls__label">Last Name</label>
+		<input data-mirror type="text" class="controls__control" name="shippingInfo[lastName]" id="shipping_lastName" value="{{ shippingInfo.lastName }}" placeholder="Last Name"/>
+	</fieldset>
+	<fieldset class="controls controls--left">
+		<label for="shipping_email" class="controls__label">E-mail Address</label>
+		<input data-mirror type="email" class="controls__control" name="shippingInfo[email]" id="shipping_email" value="{{ shippingInfo.email }}" placeholder="E-mail Address"/>
+	</fieldset>
+	<fieldset class="controls controls--right">
+		<label for="shipping_lastName" class="controls__label">Phone Number</label>
+		<input data-mirror type="text" class="controls__control" name="shippingInfo[phone]" id="shipping_phone" value="{{ shippingInfo.phone }}" placeholder="Phone Number"/>
+	</fieldset>
+	<fieldset class="controls controls--full">
+		<label for="shipping_address" class="controls__label">Address</label>
+		<input data-mirror type="text" class="controls__control" id="shipping_address" name="shippingInfo[streetAddressLine1]" value="{{ shippingInfo.streetAddressLine1 }}" placeholder="Address"/>
+	</fieldset>
+	<fieldset class="controls controls--left">
+		<label for="shipping_city" class="controls__label">City</label>
+		<input data-mirror type="text" class="controls__control" name="shippingInfo[city]" id="shipping_city" value="{{ shippingInfo.city }}" placeholder="City"/>
+	</fieldset>
+	<fieldset class="controls controls--right">
+		<label for="shipping_postalCode" class="controls__label">Post Code</label>
+		<input data-mirror type="text" class="controls__control" name="shippingInfo[postalCode]" id="shipping_postalCode" value="{{ shippingInfo.postalCode }}" placeholder="Post Code"/>
+	</fieldset>
+	<fieldset class="controls controls--left">
+		<label for="shipping_country" class="controls__label">Country</label>
+		<select data-mirror id="shipping_country" class="controls__control" name="shippingInfo[countryId]" data-state-selector="#shipping_state" data-current-state="{{ shippingInfo.stateId }}">
+			<option {{ option_state(shippingInfo.countryId, country.id) }} value="{{ country.id }}">UK</option>
+		</select>
+	</fieldset>
+	<fieldset class="controls controls--right">
+		<label for="shipping_state" class="controls__label">State</label>
+		<select data-mirror id="shipping_state" class="chzn-select controls__control" name="shippingInfo[stateId]" data-ajax-refresh>
+			<option>Cheshire</option>
+		</select>
+	</fieldset>
+</section>
+
+<div class="checkout__actions">
+	<a class="btn btn--primary btn--checkout-step pull-right" href="#" data-ajax-handler="shop:checkout" data-ajax-update="#checkout-page=shop-checkout, #checkout-progress=shop-checkout-progress, #mini-cart=shop-minicart">Next Step <i class="fa fa-arrow-right"></i></a>
+</div>

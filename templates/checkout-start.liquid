@@ -1,0 +1,57 @@
+{% layout "inner" %}
+
+{% block content %}
+	<header>
+		<h1>Checkout Sign-In</h1>
+	</header>
+
+	<section class="content checkout">
+		<div class="checkout__login">
+			<header>
+				<h2>Returning Customers</h2>
+				<p>If you already have an account, please sign in here before checking out.</p>
+			</header>
+			<form action="#" method="" accept-charset="utf-8" class="form">
+				<fieldset class="controls">
+					<input name="email" class="controls__control" placeholder="e-mail" value="{{ post('email') }}" />
+				</fieldset>
+				<fieldset class="controls">
+					<input type="password" name="password" class="controls__control" placeholder="password" />
+				</fieldset>
+				<fieldset class="controls controls--action">
+					<a class="btn btn--link pull-left" href="{{ site_url('/password-restore') }}">forgot your password?</a>
+					<button class="btn btn--primary pull-right" type="submit">Login <i class="fa fa-lock pull-right"></i></button>
+				</fieldset>
+			</form>
+		</div>
+
+		<aside class="checkout__guest">
+			<section>
+				<header>
+					<h1>Guest Checkout</h1>
+					<p>Checkout without logging in or registering an account.</p>
+				</header>
+				<a class="btn btn--primary" href="{{ site_url('checkout') }}">Continue as Guest <i class="fa fa-arrow-right pull-right"></i></a>
+			</section>
+			<section>
+				<header>
+					<h1>Register Account</h1>
+					<p>Register a new account to save your order history.</p>
+				</header>
+				<a class="btn btn--primary" href="{{ site_url('/login') }}">Register Now <i class="fa fa-pencil pull-right"></i></a>
+			</section>
+		</aside>
+
+
+
+	</section>
+
+
+{% endblock %}
+
+
+
+
+
+
+

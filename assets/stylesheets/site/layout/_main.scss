@@ -1,0 +1,17 @@
+// Main
+// ---------------------------
+// styles for <main>
+
+main {
+
+	@include gs-span(m,all);
+	margin-bottom: rem($rhythm-unit)*4;
+
+	header {
+		background: none;
+		z-index: 900;
+		h1 { margin-bottom: 0; color: $white;}
+	}
+
+}
+

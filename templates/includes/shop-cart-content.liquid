@@ -1,0 +1,26 @@
+<div id="cart-content">
+	<form action="#" method="" accept-charset="utf-8" class="form">
+
+	{{ flash() }}
+
+	{% include "shop-cart-items" %}
+
+	<div id="cart-actions" class="btn-holder clearfix">
+		<a class="btn btn--primary pull-right" href="#" data-ajax-handler="shop:cart" data-ajax-update="#cart-content=shop-cart-content, #mini-cart=shop-minicart, #navbar-totals=shop-minicart-totals">Update Cart <i class="fa fa-spin fa-refresh pull-right"></i></a>
+		<a class="btn btn--primary pull-left" href="{{ site_url('shop') }}" ><i class="fa fa-arrow-left pull-left"></i> Continue Shopping</a>
+	</div>
+
+	</form>
+
+</div>
+
+<aside class="order-summary">
+	<h1>Order Summary</h1>
+	<p>Delivery costs and VAT will be evaluated during checkout</p>
+	<ul class="list-group list-unstyled">
+		<li class="list-group__item">Subtotal: <span class="badge">£6.66</span></li>
+		<li class="list-group__item h2">Total: <span class="badge h2">£6.66</span></li>
+	</ul>
+	<a class="btn btn--default btn--block">Checkout <i class="fa fa-arrow-right pull-right"></i></a>
+
+</aside>

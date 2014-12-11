@@ -1,0 +1,129 @@
+// Cart
+// ---------------------------
+// styles for the cart page & mini cart
+
+section#cart {
+
+	#cart-content-table {
+
+		@include gs-span(m,all);
+		@include gs-media(t,min) {
+			@include gs-span(d,1,9,(1,12));
+		}
+
+	}
+	form.form { width: 100%; }
+	aside.order-summary {
+		background: rgba($white,.1);
+		@include gs-span(m,all);
+		@include gs-media(t,min) {
+			@include gs-span(d,10,12,(1,12));
+			clear: none;
+		}
+		.list-group__item {
+			padding: 0 0 rem($rhythm-unit) 0;
+			margin-bottom: rem($rhythm-unit);
+			border-bottom: 1px solid rgba($white,.1);
+			&:last-of-type {
+				border: none;
+			}
+		}
+		span.badge {
+			background: transparent;
+			&.h2 { @include font-size($h2,$line-height:false,$margin-bottom:false);}
+		}
+	}
+}
+
+// table
+#cart-content-table table {
+	@include gs-span(d,all);
+	margin-bottom: rem($rhythm-unit);
+
+	thead,tbody {
+		@include gs-span(d,all);
+		tr {
+			@include gs-span(d,all);
+		}
+	}
+	thead {
+		display: none;
+		@include gs-media(t,min) { display: block;}
+		background: rgba(64, 33, 20,.6);
+	}
+	tbody {
+		tr {
+			background: rgb(64, 33, 20);
+			border-bottom: 1px solid $border-color;
+			&:last-of-type { border: none;}
+		}
+	}
+	th,td {
+		@include gs-span(m,all);
+		clear: both;
+		margin: 0;
+		&.item {
+			@include gs-media(t,min) {
+				@include gs-span(d,1,4,(1,8));
+			}
+
+			figure.product-image {
+				@include gs-span(m,all);
+				margin-bottom: rem($rhythm-unit);
+				background: rgb(167, 118, 52);
+				@include gs-media(t,min) {
+					margin-bottom: 0;
+					width: auto;
+				}
+			}
+			.product-details {
+				@include gs-span(m,all);
+				a.product-name { @include font-size($h1,$line-height:false,$margin-bottom:false);}
+				p.product-price small { @include font-size($p,$line-height:false,$margin-bottom:false);}
+				@include gs-media(t,min) {
+
+					a.product-name {
+						font-size: inherit;
+					}
+				}
+			}
+		}
+		&.quantity {
+			@include gs-span(m,all);
+			@include gs-media(t,min) {
+				clear: none;
+				@include gs-span(d,5,6,(1,8));
+			}
+
+
+
+		}
+		&.item-total {
+			@include gs-span(m,all);
+			@include font-size($h1,$line-height:false, $margin-bottom: false);
+			a { font-size: 16px;}
+			@include gs-media(t,min) {
+				clear: none;
+				font-size: inherit;
+				@include gs-span(d,7,8,(1,8));
+			}
+		}
+	}
+}
+
+// actions
+#cart-actions {
+	a.btn {
+		margin-bottom: rem($rhythm-unit);
+	}
+}
+
+// summary
+aside.order-summary {
+	.list-group {
+			&__item {
+				border-radius: 0;
+			}
+
+	}
+}

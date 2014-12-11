@@ -1,0 +1,88 @@
+// Footer
+// ---------------------------
+// styles for <footer>
+
+footer {
+
+	@include gs-span(m,all);
+	background: $contrast-background-color;
+	padding: rem($rhythm-unit);
+}
+
+.page-footer {
+	// Mailing list
+	&__mailing-list {
+		@include gs-span(m,all);
+		margin-bottom: rem($rhythm-unit);
+		p {
+			@include gs-span(m,all);
+			@include gs-media(t,min) {
+				@include gs-span(d,1,6);
+			}
+		}
+		form {
+			@include gs-span(m,all);
+			@include gs-media(t,min) {
+				clear: none;
+				@include gs-span(d,7,12);
+			}
+			fieldset.controls {
+				margin-bottom: 0;
+			}
+			input.controls__control {
+				width: 100%;
+				@include gs-media(t,min) {
+					width: 80%;
+					float: left;
+					margin-bottom: 0;
+				}
+			}
+
+		}
+	}
+	// Nav
+	&__nav {
+		@include gs-span(m,all);
+		margin-bottom: rem($rhythm-unit);
+		@include gs-media(t,min) {
+			@include gs-span(d,1,6);
+		}
+		li {
+			@include font-size($navbar-font-size,$line-height:false,$margin-bottom:false);
+			@include gs-media(t,min) {
+				&:nth-of-type(2n+1) {
+					clear: both;
+					@include gs-span(d,1,3,(1,6));
+				}
+				&:nth-of-type(2n+2) {
+					clear: none;
+					@include gs-span(d,4,6,(1,6));
+				}
+			}
+		}
+	}
+	&__socials {
+		@include gs-span(m,all);
+		margin-bottom: rem($rhythm-unit);
+		@include gs-media(t,min) {
+			clear: none;
+			@include gs-span(d,7,12);
+		}
+		i.fa {
+			color: $white;
+		}
+	}
+	&__small-nav {
+		@include gs-span(m,all);
+		li {
+			@include gs-media(m,max) {
+				display: block;
+				padding: 0;
+			}
+			@include font-size($font-size-small,$line-height:false,$margin-bottom:false);
+			&:first-of-type {
+				padding-left: 0;
+			}
+		}
+	}
+}

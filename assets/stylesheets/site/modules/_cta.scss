@@ -1,0 +1,43 @@
+// CTA
+// ---------------------------
+// styles for Call to Action areas
+
+.cta {
+	@include gs-span(m,all);
+	.panel {
+		@include gs-span(m,all);
+		@include gs-media(t,min) {
+			clear: none;
+			&:nth-child(3n+1) {
+				@include gs-span(d,1,4,(1,12));
+			}
+			&:nth-child(3n+2) {
+				@include gs-span(d,5,8,(1,12));
+			}
+			&:nth-child(3n+3) {
+				@include gs-span(d,9,12,(1,12));
+			}
+		}
+		position: relative;
+		&__body {
+			padding: 0;
+		}
+		&__footer {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background: rgba($brand-primary,.8);
+			padding: 8px;
+			text-align: center;
+			border: none;
+			h2 {
+				@include font-size($h3,$line-height:false,$margin-bottom:false);
+				letter-spacing: 5px;
+				margin-bottom: 0;
+				text-transform: lowercase;
+				line-height: normal;
+				color: $brand-secondary;
+			}
+		}
+	}
+}

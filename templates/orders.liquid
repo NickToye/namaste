@@ -1,0 +1,44 @@
+{% layout "inner" %}
+
+{% block content %}
+
+	<header>
+		<h1>Orders</h1>
+	</header>
+
+	<section class="content orders">
+		<div id="orders-content">
+			<table class="table table--bordered">
+				<thead>
+					<tr>
+						<th class="order_no">Order #</th>
+						<th class="order_date">Date</th>
+						<th class="order_status">Status</th>
+						<th class="order_total">Total</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="order_no"><a href="{{ url }}">#34</a></a></td>
+						<td class="order_date"><a href="{{ url }}">Oct 31st, 2014</a></td>
+						<td class="order_status"><a href="{{ url }}">Quote</a></td>
+						<td class="order_total"><a href="{{ url }}"><i>£xx.xx</i></a></td>
+					</tr>
+					<tr>
+						<td class="order_no"><a href="{{ url }}">#34</a></a></td>
+						<td class="order_date"><a href="{{ url }}">Oct 31st, 2014</a></td>
+						<td class="order_status"><a href="{{ url }}">Quote</a></td>
+						<td class="order_total"><a href="{{ url }}"><i>£xx.xx</i></a></td>
+					</tr>
+					<tr>
+						<td class="order_no"><a href="{{ url }}">#34</a></a></td>
+						<td class="order_date"><a href="{{ url }}">Oct 31st, 2014</a></td>
+						<td class="order_status"><a href="{{ url }}">Quote</a></td>
+						<td class="order_total"><a href="{{ url }}"><i>£xx.xx</i></a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+</section>
+
+{% endblock %}

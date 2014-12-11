@@ -1,0 +1,30 @@
+<div id="order-content">
+	<form action="#" method="" accept-charset="utf-8" class="form">
+
+	{{ flash() }}
+
+	{% include "shop-order-items" %}
+
+	<div id="order-actions" class="btn-holder clearfix">
+		<a class="btn btn--primary pull-left" href="#">Back to History <i class="fa fa-arrow-left pull-left"></i></a>
+	</div>
+
+	</form>
+
+</div>
+
+<aside class="order-summary">
+	<h1>Order Summary</h1>
+	<table class="table table--bordered">
+		<tr>
+			<th>Payment Method:</th>
+			<td>PayPal</td>
+		</tr>
+		<tr>
+			<th>Order Date:</th>
+			<td>Oct 31st, 2014</td>
+		</tr>
+	</table>
+
+	{% include "shop-order-totals" %}
+</aside>

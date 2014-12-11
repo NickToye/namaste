@@ -1,0 +1,12 @@
+// Section
+// ---------------------------
+// styles for <section>
+
+section {
+
+	&.content {
+		@include gs-span(m,all);
+		background: $contrast-background-color;
+		padding: rem($rhythm-unit);
+	}
+}

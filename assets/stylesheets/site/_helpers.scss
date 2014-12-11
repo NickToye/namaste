@@ -1,0 +1,13 @@
+.visible-sm {
+	display: block;
+	@include gs-media(t,min) {
+		display: none;
+	}
+}
+
+.visible-md {
+	display: none;
+	@include gs-media(t,min) {
+		display: inline;
+	}
+}

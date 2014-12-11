@@ -1,0 +1,29 @@
+// Breadcrumbs
+// ---------------------------
+// Bootstrap Component
+
+.breadcrumb {
+	display: none;
+	@include gs-media(t,min) { display: block;}
+	padding: $breadcrumb-padding-vertical $breadcrumb-padding-horizontal;
+	margin-bottom: 0;
+	list-style: none;
+	background-color: $breadcrumb-background-color;
+	border-radius: $radius;
+	> li {
+		display: inline-block;
+		text-transform: lowercase;
+		+ li:before {
+			content: "/"; // Unicode space added since inline-block means non-collapsing white-space
+			padding: 0 5px;
+			color: $breadcrumb-text-color;
+			}
+		}
+	a {
+			text-decoration: none;
+			&:hover { color: $link-hover-color;}
+		}
+	> .active {
+		color: $breadcrumb-active-color;
+	}
+}

@@ -1,0 +1,14 @@
+// Aside
+// ---------------------------
+// styles for <aside>
+
+aside {
+	padding: rem($rhythm-unit);
+
+	ul + figure {
+		margin: rem($rhythm-unit)*3;
+		img {
+			margin: 0 auto;
+		}
+	}
+}

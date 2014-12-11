@@ -1,0 +1,32 @@
+// Login/Register
+// ---------------------------
+// styles for login/register pages
+
+.login-register {
+	@include gs-span(m,all);
+	.form {
+		width: 100%;
+	}
+	// login
+	&__login {
+		@include gs-span(m,all);
+		@include gs-media(t,min) {
+			@include gs-span(d,1,6);
+		}
+		.pull-right {
+			@include gs-media(m,max) {
+				float: right;
+			}
+		}
+
+	}
+	&__register {
+		@include gs-span(m,all);
+		@include gs-media(t,min) {
+			clear: none;
+			@include gs-span(d,7,12);
+		}
+		background: transparent;
+		padding: 0;
+	}
+}

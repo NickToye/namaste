@@ -1,0 +1,66 @@
+// Profile
+// ---------------------------
+// styles for the profile page
+
+.profile {
+	@include gs-span(m,all);
+	form {
+		@include gs-span(m,all);
+	}
+	&__billing-address {
+		@include gs-span(m,all);
+		@include gs-media(t,min) {
+			@include gs-span(d,1,6);
+		}
+	}
+	&__shipping-address {
+		@include gs-span(m,all);
+		@include gs-media(t,min) {
+			clear: none;
+			@include gs-span(d,7,12);
+		}
+	}
+	&__change-password {
+		@include gs-media(t,min) {
+			.controls {
+				margin-bottom: 0;
+			}
+		}
+
+	}
+	.panel__heading {
+		background: none;
+		padding: 0;
+		margin-bottom: rem($rhythm-unit);
+		h2 {
+			text-transform: none;
+			color: $brand-primary;
+		}
+	}
+	.panel__body {
+		background: rgba($white,.1);
+		margin-bottom: rem($rhythm-unit);
+		// padding: 0;
+		@include gs-media(t,min) {
+			.controls {
+				&:nth-last-of-type(-n+2) {
+					margin-bottom: 0;
+				}
+
+			}
+			.controls__control {
+				margin-bottom: 0;
+			}
+		}
+		.controls {
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.panel__footer {
+		background: none;
+		border: none;
+		padding: 0;
+	}
+}

@@ -1,0 +1,10 @@
+<ul class="list-group list-unstyled">
+	<li class="list-group__item"><span>Discount applied:</span> <span class="badge">£x.xx</span></li>
+	<li class="list-group__item"><span>Subtotal:</span> <span class="badge">£x.xx</span></li>
+	<li class="list-group__item"><span>Sales Tax:</span> <span class="badge">£x.xx</span></li>
+	<li class="list-group__item"><span>Shipping:</span> <span class="badge">£x.xx</span></li>
+	{% if order.total_shipping_tax %}
+	  <li class="list-group__item"><span>Shipping Taxes:</span> <span class="badge">£x.xx</span></li>
+	{% endif %}
+	<li class="list-group__item order-total h2 clearfix"><span>Total:</span>  <span class="badge h2">£x.xx</span></li>
+</ul>

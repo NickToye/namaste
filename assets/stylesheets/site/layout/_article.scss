@@ -1,0 +1,30 @@
+// Article
+// ---------------------------
+// styles for <article>
+
+article {
+	@include gs-span(m,all);
+	background: $contrast-background-color;
+	padding: rem($rhythm-unit);
+	margin-bottom: rem($rhythm-unit);
+	&.content-block {
+
+		@include gs-span(m,all);
+		@include gs-media(t,min) {
+			@include gs-span(d,1,8);
+		}
+
+		form {
+			@include gs-span(m,all);
+		}
+		+ aside {
+			@include gs-span(m,all);
+			@include gs-media(t,min) {
+				clear: none;
+				@include gs-span(d,9,12);
+			}
+			background: rgb(33, 27, 25);
+		}
+	}
+	h2 { color: $white;}
+}

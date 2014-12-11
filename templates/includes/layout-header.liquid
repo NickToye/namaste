@@ -1,0 +1,89 @@
+<header>
+
+	<nav class="navbar navbar--default navbar-fixed-top" role="navigation">
+
+		<div class="container-fluid">
+			<div class="logo">
+				<a href="/"><img src="../../app/img/logo.png" alt="logo" width="360" height="154" /></a>
+			</div>
+			<div class="navbar__header">
+				<div class="search-bar visible-sm">
+					<form class="form navbar__form" role="search">
+						<fieldset class="controls">
+							<input type="text" class="controls__control" placeholder="Search Namaste">
+							<button type="submit" class="btn--link"><i class="fa fa-search"></i></button>
+						</fieldset>
+
+					</form>
+				</div>
+				<button type="button" class="navbar__toggle" data-toggle="collapse" data-target=".navbar__collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<i class="fa fa-navicon"></i>
+				</button>
+
+			</div>
+
+			<div class="navbar__right">
+				<ul id="account-nav" class="nav navbar__nav">
+					<li><a href="{{ site_url('login') }}">Login <i class="fa fa-lock"></i></a></li>
+					<li><a href="#">Register</a></li>
+					<li>{% include "shop-minicart" %}</li>
+				</ul>
+				<form class="form navbar__form navbar__right visible-md" role="search">
+					<fieldset class="controls">
+						<input type="text" class="controls__control" placeholder="Search Namaste">
+						<button type="submit" class="btn--link"><i class="fa fa-search"></i></button>
+					</fieldset>
+
+				</form>
+			</div>
+
+			<div class="navbar__collapse collapse">
+
+				<ul class="nav navbar__nav navbar--products">
+					<li><a href="#" class="dropdown-toggle" data-toggle="dropdown">aromatherapy <i class="fa fa-caret-down"></i></a>
+						<ul class="sub-menu dropdown__menu">
+							<li><a href="#">carrier oils</a></li>
+							<li><a href="#">essential oil blends</a></li>
+						</ul>
+					</li>
+					<li><a href="#" class="dropdown-toggle" data-toggle="dropdown">bath &amp; body<i class="fa fa-caret-down"></i></a>
+						<ul class="sub-menu dropdown__menu">
+							<li><a href="#">Item</a></li>
+							<li><a href="#">Item</a></li>
+						</ul>
+					</li>
+					<li><a href="#" class="dropdown-toggle" data-toggle="dropdown">face<i class="fa fa-caret-down"></i></a>
+						<ul class="sub-menu dropdown__menu">
+							<li><a href="#">Item</a></li>
+							<li><a href="#">Item</a></li>
+						</ul>
+					</li>
+					<li><a href="#" class="dropdown-toggle" data-toggle="dropdown">our ranges<i class="fa fa-caret-down"></i></a>
+						<ul class="sub-menu dropdown__menu">
+							<li><a href="#">Item</a></li>
+							<li><a href="#">Item</a></li>
+						</ul>
+					</li>
+					<li><a href="#" class="dropdown-toggle" data-toggle="dropdown">spa at home<i class="fa fa-caret-down"></i></a>
+						<ul class="sub-menu dropdown__menu">
+							<li><a href="#">Item</a></li>
+							<li><a href="#">Item</a></li>
+						</ul>
+					</li>
+					<li><a href="#" class="dropdown-toggle" data-toggle="dropdown">wellbeing<i class="fa fa-caret-down"></i></a>
+						<ul class="sub-menu dropdown__menu">
+							<li><a href="#">Item</a></li>
+							<li><a href="#">Item</a></li>
+						</ul>
+					</li>
+				</ul>
+
+			</div>
+			<!--/.navbar-collapse -->
+		</div>
+	</nav>
+</header>
+
+
+

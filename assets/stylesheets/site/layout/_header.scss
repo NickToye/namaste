@@ -1,0 +1,198 @@
+// Header
+// ---------------------------
+// styles for <header>
+
+header {
+	@include gs-media(t,min) {
+}
+
+	@include gs-span(d,all);
+	margin-bottom: rem($rhythm-unit)*2;
+	position: relative;
+	z-index: 1000;
+	.navbar {
+		&__header {
+			@include gs-span(m,all);
+			margin: 0 !important;
+			@include gs-media(t,min) {
+				display: none;
+			}
+			.search-bar {
+				width: 100%;
+			}
+			form {
+				border: none;
+				margin: 0;
+			}
+		}
+		&--default {
+			background: none;
+			border: none;
+		}
+		.container-fluid {
+			width: auto;
+			padding: 0;
+			> .navbar__collapse { margin: 0;}
+		}
+		.logo {
+			@include gs-float(d,left);
+			margin: 20px 0px;
+			@include gs-media(t,min) {
+/* 				margin: 40px 0; */
+			}
+		}
+		&__toggle {
+			background: $brand-primary;
+			padding: 0 !important;
+			margin: 0;
+			width: 44px;
+			height: 44px;
+			i.fa {
+				font-size: 24px;
+				color: $brand-tertiary;
+			}
+		}
+		&__collapse {
+			border: none;
+			box-shadow: none;
+			clear: both;
+			margin: 0;
+			padding: 0;
+		}
+		&__right {
+			float: left;
+			margin-top: -50px;
+			@include gs-media(t,min) {
+				float: right;
+				margin-top: inherit;
+			}
+			ul.navbar__nav {
+				float: right;
+			}
+			form {
+				clear: right;
+			}
+		}
+		&--products {
+			@include gs-span(m,all);
+			background: $brand-primary;
+			@include gs-media(t,min) {
+				text-align: center;
+			}
+			li {
+				position: relative;
+				display: block;
+				border-bottom: 1px dashed rgba($brand-secondary,.3);
+				@include font-size(16,$line-height: false, $margin-bottom: false);
+				&:last-of-type {
+					border-bottom: none;
+				}
+				@include gs-media(t,min) {
+					border: none;
+					float: none;
+					display: inline-block;
+				}
+
+// 				padding: 0 rem($rhythm-unit);
+				@include gs-media(t,min) {
+					ul.sub-menu {
+					position: absolute;
+					top: auto;
+					left: 0;
+					opacity: 0;
+					display: none;
+				}
+					&:hover ul.sub-menu { opacity: 1; display: block;}
+				}
+				i.fa {
+					float: right;
+					position: relative;
+					top: 5px;
+					@include gs-media(t,min) { display: none;}
+				}
+			}
+
+			li a {
+				color: $brand-secondary;
+				&:hover { color: $brand-tertiary; }
+			}
+		}
+		&__form {
+			padding: 0;
+			margin: 0 20px 20px;
+			.controls {
+				background: $brand-secondary;
+				border: 1px solid $brand-primary;
+				border-radius: $radius;
+				padding: 0 rem($rhythm-unit);
+			}
+			.controls__control {
+				background: none;
+				border: none;
+				display: inline;
+				width: auto;
+				margin-bottom: 0;
+				&:focus {
+					box-shadow: none;
+				}
+			}
+		}
+
+		ul.sub-menu {
+			background: $navbar-submenu-background-color;
+			width: 160px;
+			padding: 0 .5em 1em;
+			@include gs-media(t,min) {
+				padding: .5em .5em 1em;
+			}
+
+			@include transition(all .1s ease);
+			li {
+				display: block;
+// 				padding: .25em;
+				border: none;
+			}
+
+		}
+	}
+	#account-nav {
+		margin: 20px 0;
+		@include gs-media(t,min) {
+			margin: 20px;
+		}
+		li {
+			display: inline-block;
+			border-right: 1px solid $brand-primary;
+			padding-right: 5px;
+			margin-right: 5px;
+			&:last-of-type {
+				border-right: none;
+				padding: 0;
+				margin: 0;
+			}
+		}
+		a {
+			padding: 0;
+		}
+		span.items {
+			margin-left: 10px;
+		}
+		i.fa {
+// 			margin-left: 10px;
+		}
+	}
+	.search-bar .form {
+		.controls__control {
+			float: left;
+			width: 80%;
+			margin-bottom: 0;
+		}
+		button {
+			float: right;
+			position: relative;
+			top: 3px;
+		}
+	}
+
+}
+

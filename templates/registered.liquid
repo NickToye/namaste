@@ -1,0 +1,24 @@
+{% layout 'inner' %}
+
+{% block content %}
+
+<header>
+	<h1>Thanks for Registering</h1>
+</header>
+
+<article>
+	<p>A confirmation email has been sent to your email address.</p>
+	<p>You have been automatically logged in.</p>
+
+</article>
+
+<section class="product-grid">
+	<h2>You may be interested in...</h2>
+	{% include "shop-grid-item" %}
+	{% include "shop-grid-item" %}
+	{% include "shop-grid-item" %}
+</section>
+
+{% endblock %}
+
+
